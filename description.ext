@@ -1,0 +1,53 @@
+//Mission Info
+author = "Dozette & Loli";
+onLoadName = "TRU Player Composition & Testing V1"; //What will appear as the mission name when loading in
+onLoadMission = "TRU conducts testing exercises in cyberspace..."; //Description of the op when loading in
+onLoadMissionTime = 1;
+onLoadIntroTime = 1;
+//loadScreen = "media\flag.paa"; //Intro image, must be paa
+//overviewPicture = "media\intro.paa"; //Selection image, must be paa
+overviewText = "TRU conducts testing exercises in cyberspace..."; //Mission Description in selection menu
+
+//Respawn
+respawn = "Base"; // base, respawn_west, if no respawn position exists defaults to INSTANT
+respawnTemplates[] = {"MenuPosition", "Wave", "Tickets"}; //Tickets, EndMission, Wave, Base, MenuPosition
+respawnOnStart = 0; // DO not run respawn scripts on startup of mission
+respawnDelay = 5; // Delay in seconds between waves
+onPlayerKilled = "scripts\onPlayerKilled.sqf";
+onPlayerRespawn = "scripts\onPlayerRespawn.sqf";
+
+//Mission Management
+corpseManagerMode = 1; // 1 - All, 2 - Only Respawnable, 3 - All but Respawnable, 2 is default
+corpseLimit = 30;
+corpseRemovalMinTime = 10;
+corpseRemovalMaxtime = 300;
+wreckManagerMode = 1; //Same as Corpse Manager corpseManagerMode
+wreckLimit = 30;
+wreckRemovalMinTime = 30;
+wreckRemovalMaxTime = 1500;
+minPlayerDistance = 10;
+
+//Minor Items
+aiKills = 0; // Display AI kills in score table. 0: disabled - 1: enabled. Default: 0
+briefing = 0; // Skip briefing for SP missions. 0: disabled - 1: enabled. Default: 1
+debriefing = 1; // Defines if debriefing is shown at the end of the mission. 0: disabled - 1: enabled. Default: 1
+enableDebugConsole = 1; // Allows access to Debug Console. 0: Default only in editor. 1: Available in SP and for logged in admins. 2: Available for everyone - dangerous in MP.
+disabledAI = 1; // MP setting, removes all playable units which do not have a human player. // 0: disabled - 1: enabled. Default: 0
+
+//Tasks System (if in use)
+taskManagement_markers3D = 1;
+taskManagement_propagate = 1;
+taskManagement_drawDist = 3000;
+
+//Custom Effects
+
+
+//Other
+
+//Header
+class Header {
+	gameType = Coop; // Game Type
+	minPlayers = 1; // Minimum number of players the mission supports
+	maxPlayers = 35; // Maximum number of players the mission supports
+};
+// More functions can be found at https://community.bistudio.com/wiki/Description.ext
